@@ -1,7 +1,7 @@
 # Jekflix Template
 ![Cover Image](http://res.cloudinary.com/dm7h7e8xj/image/upload/v1505354182/jekflix-logo_mfngps.png)
 
-See the [demo here](https://www.rossener.com/jekflix-template).
+See the [demo here](https://hoangmirs.github.io/jekflix-template/).
 
 ## What is it?
 
@@ -16,7 +16,7 @@ A template for Jekyll inspired by Netflix panel for who loves movies and series 
 - Live Search
 - Minutes to Read
 - Reading Progress Bar
- 
+
  ![Progress Bar](http://res.cloudinary.com/dm7h7e8xj/image/upload/v1505357769/jekflix-progress-bar_he7gqf.jpg)
 - "New Post" tag
 - Load images on demand
@@ -108,7 +108,7 @@ You can use the `initpost.sh` to create your new posts. Just follow the command:
 
 The new file will be created at `_posts` with this format `date-title.md`.
 
-## Front-matter 
+## Front-matter
 
 When you create a new post, you need to fill the post information in the front-matter, follow this example:
 
