@@ -16,6 +16,11 @@ mkdir _site
 # clone remote repo to "_site"
 git clone https://${GITHUB_TOKEN}@github.com/hoangmirs/jekflix-template.git --branch gh-pages _site
 
+# gulp
+npm install
+npm install -g gulp gulp-cli
+gulp build
+
 # build with Jekyll into "_site"
 bundle exec jekyll build
 
