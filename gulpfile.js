@@ -94,3 +94,32 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['js', 'stylus', 'browser-sync', 'watch']);
+
+
+/**
+ * Build js, stylus, imagemin
+ */
+gulp.task('build', ['js', 'stylus', 'imagemin']);
+
+/**
+ * Jekyll serve
+ */
+gulp.task('jekyll-serve', function (done) {
+  browserSync.notify(messages.jekyllBuild);
+  return cp.spawn('bundle', ['exec', 'jekyll s --watch'], {stdio: 'inherit'})
+    .on('close', done);
+});
+
+/**
+ * Watch JS & stylus files for changes & recompile
+ */
+gulp.task('watch-serve', function () {
+  gulp.watch('src/styl/**/*.styl', ['stylus']);
+  gulp.watch('src/js/**/*.js', ['js']);
+});
+
+/**
+ * Watch JS & stylus files for changes & recompile
+ * Jekyll serve and watch
+ */
+gulp.task('dev', ['jekyll-serve', 'watch-serve']);
